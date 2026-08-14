@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shaun Malhotra — computer science, automation, data, and operations." />
+  <title>Shaun Malhotra</title>
+  <style>
+:root {
+  --bg: #f7f7f4;
+  --ink: #111;
+  --muted: #6d6d68;
+  --line: #d7d7d0;
+  --accent: #e8ff3f;
+  --pad: clamp(18px, 4vw, 56px);
+  --max: 1380px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 58px;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247,247,244,.94);
+  backdrop-filter: blur(8px);
+}
+
+.wordmark {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+nav, .header-links {
+  display: flex;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.header-links { justify-self: end; }
+
+.header-links {
+  align-items: center;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 13px;
+  margin-left: 2px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+  background: var(--accent);
+  color: var(--ink);
+  outline: none;
+}
+
+
+main, footer {
+  width: min(100%, calc(var(--max) + var(--pad) * 2));
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 72px var(--pad) 54px;
+}
+
+.intro-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+h1 {
+  margin: 26px 0 34px;
+  font-size: clamp(58px, 11vw, 150px);
+  line-height: .82;
+  letter-spacing: -0.075em;
+  font-weight: 700;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, .8fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.intro-copy {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.intro-meta {
+  border-top: 1px solid var(--ink);
+}
+
+.intro-meta > div {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 12px 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.intro-meta strong,
+.intro-meta a {
+  grid-column: 2;
+  font-weight: 600;
+}
+
+.intro-meta > div > span:last-child {
+  grid-column: 2;
+  color: var(--muted);
+}
+
+.label {
+  grid-row: 1 / span 2;
+  color: var(--muted);
+}
+
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--accent);
+}
+
+.ticker-track {
+  width: max-content;
+  padding: 9px 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 12px;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track i {
+  font-style: normal;
+  opacity: .55;
+}
+
+@keyframes ticker {
+  to { transform: translateX(-50%); }
+}
+
+.section {
+  padding: 58px var(--pad) 70px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--ink);
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 44px 1fr 1fr;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.section-head .index {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+.section-head p {
+  margin: 0;
+  justify-self: end;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.rows {
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 110px minmax(280px, .8fr) 1.2fr;
+  gap: 24px;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.row-date {
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.row-main h3 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+
+.sub {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.row-copy {
+  max-width: 680px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 12px;
+}
+
+.project {
+  min-height: 300px;
+  padding: 22px;
+  border: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.project h3 {
+  margin: auto 0 12px;
+  font-size: clamp(36px, 5vw, 70px);
+  line-height: .9;
+  letter-spacing: -0.06em;
+}
+
+.project p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.stack {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.project-tool {
+  background: #111;
+  color: #f7f7f4;
+}
+
+.project-tool .project-top,
+.project-tool .note {
+  color: #aaa;
+}
+
+.calculator {
+  margin: auto 0 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.calculator label,
+.calc-result {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.calculator input {
+  width: 100%;
+  margin-top: 7px;
+  padding: 8px 9px;
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
+}
+
+.calc-result {
+  grid-column: 1 / -1;
+}
+
+.calc-result span,
+.calc-result strong {
+  display: block;
+}
+
+.calc-result strong {
+  margin-top: 5px;
+  font-size: 30px;
+  color: var(--accent);
+}
+
+.note {
+  font-size: 11px !important;
+}
+
+.skill-table {
+  border-top: 1px solid var(--ink);
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 24px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-row > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.skill-row p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ink);
+}
+
+.education article {
+  min-height: 220px;
+  padding: 18px 18px 18px 0;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.education article + article {
+  padding-left: 18px;
+}
+
+.education article:last-child {
+  border-right: 0;
+}
+
+.year {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.education h3 {
+  margin: auto 0 8px;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+
+.education p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+footer {
+  padding: 18px var(--pad) 28px;
+  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 24px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+footer button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  nav { display: none; }
+
+  .intro-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .row-copy {
+    grid-column: 2;
+  }
+
+  .education {
+    grid-template-columns: 1fr;
+  }
+
+  .education article {
+    min-height: 150px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0 !important;
+  }
+
+  .education article:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 620px) {
+  .header-links a:not(.contact-button) { display: none; }
+
+  .contact-button {
+    min-height: 32px;
+    padding: 0 11px;
+  }
+
+  .intro {
+    padding-top: 48px;
+  }
+
+  .intro-topline {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: clamp(58px, 20vw, 94px);
+  }
+
+  .section-head {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .section-head p {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .row-copy { grid-column: 1; }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
+}
+
+</style>
+  
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top">SM</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </nav>
+    <div class="header-links">
+      <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a class="contact-button" href="mailto:smalhotra.97@gmail.com">Contact me ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <div class="intro-topline">
+        <span>Toronto / GTA</span>
+        <span>Computer Science · Data · Automation</span>
+      </div>
+
+      <h1>Shaun Malhotra</h1>
+
+      <div class="intro-grid">
+        <p class="intro-copy">
+          I work on software, automation, data, and business operations.
+          My background spans computer science, commercial real estate,
+          accounting, and IT.
+        </p>
+
+        <div class="intro-meta">
+          <div>
+            <span class="label">Now</span>
+            <strong>Business Operations & Automation</strong>
+            <span>West Mississauga Dental</span>
+          </div>
+          <div>
+            <span class="label">School</span>
+            <strong>B.C.S. — Data Analytics</strong>
+            <span>Sheridan · 2027</span>
+          </div>
+          <div>
+            <span class="label">Contact</span>
+            <a href="mailto:smalhotra.97@gmail.com">smalhotra.97@gmail.com ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Focus areas">
+      <div class="ticker-track">
+        <span>automation</span><i>•</i>
+        <span>python</span><i>•</i>
+        <span>apis</span><i>•</i>
+        <span>data analytics</span><i>•</i>
+        <span>business systems</span><i>•</i>
+        <span>real estate operations</span><i>•</i>
+        <span>automation</span><i>•</i>
+        <span>python</span><i>•</i>
+        <span>apis</span><i>•</i>
+        <span>data analytics</span><i>•</i>
+        <span>business systems</span><i>•</i>
+        <span>real estate operations</span><i>•</i>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <span class="index">01</span>
+        <h2>Work</h2>
+        <p>Selected experience, newest first.</p>
+      </div>
+
+      <div class="rows">
+        <article class="row">
+          <div class="row-date">2026—</div>
+          <div class="row-main">
+            <h3>Business Operations & Automation</h3>
+            <p class="sub">West Mississauga Dental · Mississauga</p>
+          </div>
+          <div class="row-copy">
+            Clearing an AR backlog in ABELDent, improving administrative workflows,
+            identifying automation opportunities, and creating SOPs.
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-date">2023—</div>
+          <div class="row-main">
+            <h3>Bookkeeper</h3>
+            <p class="sub">Food4Less · Lindsay</p>
+          </div>
+          <div class="row-copy">
+            Migrated manual financial records into QuickBooks and manage AP, AR,
+            invoices, bills, and payment discrepancies.
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-date">2016—</div>
+          <div class="row-main">
+            <h3>Property Manager</h3>
+            <p class="sub">1297322 Ontario Limited · Milton</p>
+          </div>
+          <div class="row-copy">
+            Manage day-to-day operations for roughly 30 commercial tenants,
+            including leasing, billing, vendors, maintenance, and tenant issues.
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-date">2015—18</div>
+          <div class="row-main">
+            <h3>Manager of Operations</h3>
+            <p class="sub">GCentre Ajax · Ajax</p>
+          </div>
+          <div class="row-copy">
+            Managed staff, built SOPs, supported booking systems, and coordinated
+            event, membership, and facility operations.
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-date">2014—15</div>
+          <div class="row-main">
+            <h3>Assistant IT Director</h3>
+            <p class="sub">Atlas Paper Bags · Ajax</p>
+          </div>
+          <div class="row-copy">
+            Supported an SAP CO rollout, user setup and training, workstation
+            configuration, networking, and technical support.
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-date">2007—08</div>
+          <div class="row-main">
+            <h3>Assistant IT Director</h3>
+            <p class="sub">Universal Stainless & Alloys · Mississauga</p>
+          </div>
+          <div class="row-copy">
+            First-line IT support covering software installation, networking,
+            updates, antivirus, and hardware troubleshooting.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <span class="index">02</span>
+        <h2>Projects</h2>
+        <p>Technical work worth opening.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-top">
+            <span>01</span>
+            <span>ML / GEO / DATA</span>
+          </div>
+          <h3>HydraX</h3>
+          <p>
+            Rainfall forecasting and water-capture analytics using historical
+            climate data, machine learning, and geospatial mapping.
+          </p>
+          <div class="stack">Python · TensorFlow · scikit-learn · React · Geocoding API</div>
+        </article>
+
+        <article class="project project-tool">
+          <div class="project-top">
+            <span>02</span>
+            <span>SMALL TOOL</span>
+          </div>
+          <h3>Rain capture calculator</h3>
+          <div class="calculator">
+            <label>
+              Rainfall (mm)
+              <input id="rain" type="number" min="0" value="12">
+            </label>
+            <label>
+              Area (m²)
+              <input id="area" type="number" min="0" value="120">
+            </label>
+            <div class="calc-result">
+              <span>Estimated capture</span>
+              <strong id="result">1,440 L</strong>
+            </div>
+          </div>
+          <p class="note">1 mm of rain on 1 m² ≈ 1 litre before losses.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <span class="index">03</span>
+        <h2>Skills</h2>
+        <p>Grouped by how I use them.</p>
+      </div>
+
+      <div class="skill-table">
+        <div class="skill-row">
+          <span>Programming</span>
+          <p>Python, JavaScript, SQL, Java, C#, C/C++, Rust, HTML/CSS</p>
+        </div>
+        <div class="skill-row">
+          <span>Data / ML</span>
+          <p>TensorFlow, scikit-learn, Power BI, RStudio, Apache Spark, Hadoop</p>
+        </div>
+        <div class="skill-row">
+          <span>Web / APIs</span>
+          <p>REST APIs, OAuth, Flask, Django, ASP.NET, Spring MVC, Spring Security</p>
+        </div>
+        <div class="skill-row">
+          <span>Business systems</span>
+          <p>QuickBooks, SAP, Excel, ABELDent</p>
+        </div>
+        <div class="skill-row">
+          <span>Development</span>
+          <p>Git, Docker</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-head">
+        <span class="index">04</span>
+        <h2>Education</h2>
+        <p>Computer science + business.</p>
+      </div>
+
+      <div class="education">
+        <article>
+          <span class="year">2027</span>
+          <h3>Honours Bachelor of Computer Science</h3>
+          <p>Data Analytics · Sheridan College</p>
+        </article>
+        <article>
+          <span class="year">2011</span>
+          <h3>Bachelor of Business Administration</h3>
+          <p>Schulich School of Business · York University</p>
+        </article>
+        <article>
+          <span class="year">Cert.</span>
+          <h3>CS50</h3>
+          <p>Harvard University</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>Shaun Malhotra</div>
+    <div class="footer-links">
+      <a href="mailto:smalhotra.97@gmail.com">Email</a>
+      <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+    <button id="top-button" type="button">Top ↑</button>
+  </footer>
+<script>
+(() => {
+  const rain = document.getElementById("rain");
+  const area = document.getElementById("area");
+  const result = document.getElementById("result");
+
+  const update = () => {
+    const mm = Number(rain?.value || 0);
+    const sqm = Number(area?.value || 0);
+    const litres = Math.max(0, mm * sqm);
+    if (result) result.textContent = `${litres.toLocaleString("en-CA")} L`;
+  };
+
+  rain?.addEventListener("input", update);
+  area?.addEventListener("input", update);
+  update();
+
+  document.getElementById("top-button")?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+
+</script>
+</body>
+</html>
