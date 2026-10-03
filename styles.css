@@ -766,7 +766,7 @@ em {
 /* Smaller projects */
 .mini-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   margin-top: 24px;
 }
@@ -796,9 +796,72 @@ em {
   font-size: 15.5px;
 }
 
-.mini .text-link { margin-top: auto; }
-.mini-link:hover .text-link { color: var(--accent); }
-.mini-link:hover .i-arrow { transform: translate(2px, -2px); }
+.mini .stack { margin-top: auto; padding-top: 4px; }
+
+.my-part {
+  width: 100%;
+  padding: 14px 16px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+}
+
+.my-part h4 {
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.my-part p {
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+.github-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .015);
+  transition: border-color 200ms ease, background 200ms ease;
+}
+
+.github-row:hover {
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, .035);
+}
+
+.github-row-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.github-row-icon svg { width: 20px; height: 20px; }
+
+.github-row-text {
+  display: grid;
+  gap: 2px;
+  margin-right: auto;
+}
+
+.github-row-text strong { font-weight: 500; }
+.github-row-text span { color: var(--muted); font-size: 14.5px; }
+
+.github-row:hover .text-link { color: var(--accent); }
+.github-row:hover .i-arrow { transform: translate(2px, -2px); }
 
 /* ==========================================================================
    Experience
@@ -1375,6 +1438,10 @@ body.contact-open { overflow: hidden; }
   .features--4 { grid-template-columns: minmax(0, 1fr); }
 
   .project-links .btn { flex: 1 1 auto; }
+
+  .github-row { flex-wrap: wrap; }
+  .github-row-text { flex: 1 1 calc(100% - 60px); margin-right: 0; }
+  .github-row .text-link { margin-left: 60px; }
 
   .tl-item {
     grid-template-columns: minmax(0, 1fr);
