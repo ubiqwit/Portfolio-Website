@@ -19,10 +19,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Bump ?v= whenever styles.css or script.js changes, so browsers never pair a new page with a cached old file. -->
+  <link rel="stylesheet" href="styles.css?v=13cb6472" />
 
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=0a024a59" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,10 +44,10 @@
 
       <div class="header-actions">
         <a class="icon-link" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
         </a>
         <a class="icon-link" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
         </a>
         <button class="btn btn-accent btn-sm" id="open-contact" type="button" data-open-contact>Contact</button>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -63,7 +64,7 @@
         <a class="hero-pill" href="#pmm">
           <span class="pill-tag">New</span>
           <span>Private Mortgage Manager</span>
-          <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
 
         <h1 class="hero-title">
@@ -80,7 +81,7 @@
         <div class="hero-actions">
           <a class="btn btn-accent" href="#projects">
             See my work
-            <svg class="i-arrow i-down" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg>
+            <svg class="i-arrow i-down" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg>
           </a>
           <button class="btn btn-ghost" type="button" data-open-contact>Get in touch</button>
         </div>
@@ -145,7 +146,7 @@
               <div class="project-links">
                 <a class="btn btn-light" href="https://github.com/ubiqwit/private-mortgage-manager" target="_blank" rel="noreferrer">
                   View source
-                  <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+                  <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
                 </a>
               </div>
             </div>
@@ -167,32 +168,32 @@
 
           <ul class="features">
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>
               <h4>Portfolio dashboard</h4>
               <p>Capital deployed, interest run-rate, weighted rate and CLTV, arrears, a maturity ladder and concentration by position, property type and city.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg></span>
               <h4>Bank reconciliation</h4>
               <p>Imports CSV, Excel and OFX exports from any Canadian bank and matches deposits to mortgages by learned description, borrower, amount and due date.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
               <h4>Real mortgage maths</h4>
               <p>Fixed or prime-plus-spread with floors, Canadian semi-annual compounding, interest-only or blended payments, daily accrual, and renewals that keep historical terms.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
               <h4>Month-end close</h4>
               <p>A per-loan income report exported to Excel with live formulas — then the month is locked so the numbers sent to the accountant can’t drift.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
               <h4>Live market data</h4>
               <p>Bank of Canada policy rate, prime, GoC yields and CPI, plus what a ±25 or 50 bp prime move does to the book’s income.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
               <h4>Built for real money</h4>
               <p>Admin, editor and read-only roles, account lockout, CSRF and CSP, an audit log of every change, and tests on SQLite and PostgreSQL in CI.</p>
             </li>
@@ -224,7 +225,7 @@
               <div class="project-links">
                 <a class="btn btn-light" href="https://core-continuum.com" target="_blank" rel="noreferrer">
                   Visit core-continuum.com
-                  <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+                  <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
                 </a>
                 <a class="btn btn-ghost" href="https://github.com/ubiqwit/Graduate-School-of-Core-Energetics-Website" target="_blank" rel="noreferrer">Source</a>
               </div>
@@ -247,22 +248,22 @@
 
           <ul class="features features--4">
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m10 9.5 4.5 2.5-4.5 2.5z"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m10 9.5 4.5 2.5-4.5 2.5z"/></svg></span>
               <h4>Cinematic hero</h4>
               <p>A slowed, full-bleed video background with a still-image fallback — paused for visitors who prefer reduced motion.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></span>
               <h4>Built for scanning</h4>
               <p>Curriculum, faculty and program details laid out so prospective students find dates, instructors and tuition fast.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M13 8.5l3.5 3.5-3.5 3.5"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M13 8.5l3.5 3.5-3.5 3.5"/></svg></span>
               <h4>Straight to registration</h4>
               <p>Responsive navigation and clear calls to action lead to the application from every part of the page.</p>
             </li>
             <li>
-              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+              <span class="feature-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
               <h4>No build step</h4>
               <p>Plain HTML, CSS and JavaScript with design tokens — fast, cheap to host, and easy to keep updated.</p>
             </li>
@@ -293,7 +294,7 @@
             </ul>
             <a class="text-link" href="https://github.com/ubiqwit/HydraX" target="_blank" rel="noreferrer">
               View source
-              <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+              <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
             </a>
           </article>
 
@@ -318,14 +319,14 @@
             </ul>
             <a class="text-link" href="https://github.com/moss951/Nutrition-App-MVC" target="_blank" rel="noreferrer">
               View source
-              <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+              <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
             </a>
           </article>
         </div>
 
         <a class="github-row reveal" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">
           <span class="github-row-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
           </span>
           <span class="github-row-text">
             <strong>More on GitHub</strong>
@@ -333,7 +334,7 @@
           </span>
           <span class="text-link">
             github.com/ubiqwit
-            <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
           </span>
         </a>
       </div>
@@ -535,7 +536,7 @@
       </nav>
       <button class="to-top" id="top-button" type="button">
         Back to top
-        <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
+        <svg class="i-arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
       </button>
     </div>
   </footer>
@@ -551,7 +552,7 @@
           <h2 id="contact-title">Send me a message.</h2>
         </div>
         <button class="contact-close" type="button" data-close-contact aria-label="Close contact form">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+          <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
         </button>
       </div>
 
