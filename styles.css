@@ -19,7 +19,6 @@
   --danger: #ff8a7a;
 
   --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --max: 1180px;
@@ -68,13 +67,6 @@ ul, ol { padding: 0; list-style: none; }
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 6px;
-}
-
-em {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
 }
 
 .container {
@@ -355,7 +347,7 @@ em {
 .hero-title {
   max-width: 1120px;
   margin-top: 28px;
-  font-size: clamp(42px, 7vw, 88px);
+  font-size: clamp(42px, 6.2vw, 78px);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.045em;
@@ -366,13 +358,6 @@ em {
 
 @media (min-width: 1100px) {
   .br-wide { display: inline; }
-}
-
-.hero-title em {
-  color: var(--accent);
-  font-size: 1.07em;
-  letter-spacing: -0.025em;
-  line-height: .9;
 }
 
 .hero-lede {
@@ -482,12 +467,6 @@ em {
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -0.04em;
-}
-
-.section-head h2 em,
-.cta h2 em {
-  color: var(--accent);
-  font-size: 1.08em;
 }
 
 .section-sub {
