@@ -2,6 +2,28 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  // Highlight the nav link for the section in view
+  const navLinks = new Map(
+    [...document.querySelectorAll('#nav a[href^="#"]')].map((link) => [link.getAttribute("href").slice(1), link])
+  );
+
+  if ("IntersectionObserver" in window && navLinks.size) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link, id) => link.classList.toggle("is-active", id === entry.target.id));
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+
+    navLinks.forEach((_, id) => {
+      const section = document.getElementById(id);
+      if (section) sectionObserver.observe(section);
+    });
+  }
+
   // Contact popup
   const contactModal = document.getElementById("contact-modal");
   const openContactButtons = document.querySelectorAll("[data-open-contact]");

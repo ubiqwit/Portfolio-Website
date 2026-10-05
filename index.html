@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Bump ?v= whenever styles.css or script.js changes, so browsers never pair a new page with a cached old file. -->
-  <link rel="stylesheet" href="styles.css?v=984e9247" />
+  <link rel="stylesheet" href="styles.css?v=1a48fe7b" />
 
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <script src="script.js?v=36684373" defer></script>
+  <script src="script.js?v=fb024f49" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -31,57 +31,86 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="name" href="#top">Shaun Malhotra</a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" id="nav" aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#approach">Approach</a>
         <a href="#experience">Experience</a>
-        <button type="button" data-open-contact>Contact</button>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
       </nav>
+      <button class="button button-sm" type="button" data-open-contact>Contact</button>
     </div>
   </header>
 
   <main id="main">
     <!-- Intro -->
-    <section class="intro wrap" id="top">
-      <h1>Software for the back office, from someone who’s worked in it.</h1>
-      <p class="lede">
-        I build tools for finance and operations: ledgers, reconciliations, reporting,
-        and the workflows around them. I’ve spent more than a decade in property
-        management, bookkeeping, IT, and operations, so I build for the people who
-        actually use the software.
-      </p>
-      <p class="meta">
-        Business Operations &amp; Automation Specialist at West Mississauga Dental
-        <span aria-hidden="true">·</span> Computer Science at Sheridan College
-        <span aria-hidden="true">·</span> Toronto / GTA
-      </p>
-      <p class="links">
-        <a href="mailto:shaun.softdev@gmail.com">Email</a>
-        <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn</a>
-      </p>
+    <section class="intro" id="top">
+      <div class="wrap">
+        <p class="kicker">Developer · Toronto / GTA</p>
+        <h1>Software for the back office, from someone who’s worked in it.</h1>
+        <p class="lede">
+          I build tools for finance and operations: ledgers, reconciliations, reporting,
+          and the workflows around them. I’ve spent more than a decade in property
+          management, bookkeeping, IT, and operations, so I build for the people who
+          actually use the software.
+        </p>
+        <div class="intro-actions">
+          <a class="button" href="#projects">See my work</a>
+          <button class="button button-outline" type="button" data-open-contact>Get in touch</button>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Now</dt>
+            <dd>Business Operations &amp; Automation Specialist</dd>
+            <dd class="muted">West Mississauga Dental</dd>
+          </div>
+          <div>
+            <dt>Studying</dt>
+            <dd>Hons. B.C.S., Data Analytics</dd>
+            <dd class="muted">Sheridan College · Expected 2028</dd>
+          </div>
+          <div>
+            <dt>Elsewhere</dt>
+            <dd class="fact-links">
+              <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="mailto:shaun.softdev@gmail.com">Email</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <!-- Projects -->
-    <section class="section wrap" id="projects">
-      <h2 class="label">Projects</h2>
-      <div class="content">
-        <article class="project">
-          <header class="project-head">
-            <h3><a href="https://github.com/ubiqwit/private-mortgage-manager" target="_blank" rel="noreferrer">Private Mortgage Manager</a></h3>
-            <span class="muted">2026</span>
-          </header>
-          <p>
-            A web app for private mortgage lenders. It tracks every loan in the book,
-            matches bank deposits to mortgage payments, follows the rate environment,
-            and produces month-end income reports for the accountant.
-          </p>
-          <ul class="points">
-            <li>Portfolio dashboard with arrears, a maturity ladder and concentration by position, property type and city</li>
-            <li>Bank reconciliation from CSV, Excel and OFX statements from any Canadian bank</li>
-            <li>Month-end Excel reports, role-based access, an audit log, and 78 automated tests in CI</li>
-          </ul>
-          <ul class="stack" aria-label="Built with"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Chart.js</li><li>Docker</li><li>GitHub Actions</li></ul>
+    <section class="section section-alt" id="projects">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="index">01</span>
+          <h2>Projects</h2>
+          <p>A full-stack finance app, a live client website, and team projects in data and machine learning.</p>
+        </header>
+
+        <article class="card feature">
+          <div class="feature-text">
+            <p class="meta">2026 · Full-stack web app</p>
+            <h3>Private Mortgage Manager</h3>
+            <p>
+              A web app for private mortgage lenders. It tracks every loan in the book,
+              matches bank deposits to mortgage payments, follows the rate environment,
+              and produces month-end income reports for the accountant.
+            </p>
+            <ul class="points">
+              <li>Portfolio dashboard with arrears, a maturity ladder and concentration by property type and city</li>
+              <li>Bank reconciliation from CSV, Excel and OFX statements from any Canadian bank</li>
+              <li>Month-end Excel reports, role-based access, an audit log, and 78 automated tests in CI</li>
+            </ul>
+            <ul class="stack" aria-label="Built with">
+              <li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Chart.js</li><li>Docker</li><li>GitHub Actions</li>
+            </ul>
+            <p class="card-links">
+              <a href="https://github.com/ubiqwit/private-mortgage-manager" target="_blank" rel="noreferrer">View source ↗</a>
+            </p>
+          </div>
           <figure class="shot">
             <picture>
               <source srcset="assets/pmm-dashboard.webp" type="image/webp" />
@@ -91,18 +120,27 @@
           </figure>
         </article>
 
-        <article class="project">
-          <header class="project-head">
-            <h3><a href="https://core-continuum.com" target="_blank" rel="noreferrer">Core Continuum</a></h3>
-            <span class="muted">Client work · Live</span>
-          </header>
-          <p>
-            The website for Core Continuum, a graduate-level Core Energetics training
-            program, live and in use by the client. A video hero that respects
-            reduced-motion settings, curriculum and faculty sections, and a direct path
-            to registration — plain HTML, CSS and JavaScript with no build step.
-          </p>
-          <ul class="stack" aria-label="Built with"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        <article class="card feature">
+          <div class="feature-text">
+            <p class="meta">2026 · Client work · <span class="live">Live</span></p>
+            <h3>Core Continuum</h3>
+            <p>
+              The website for Core Continuum, a graduate-level Core Energetics training
+              program, live and in use by the client.
+            </p>
+            <ul class="points">
+              <li>Video hero that pauses for visitors who prefer reduced motion</li>
+              <li>Curriculum, faculty and program details laid out for quick scanning</li>
+              <li>A direct path to registration; plain HTML, CSS and JavaScript with no build step</li>
+            </ul>
+            <ul class="stack" aria-label="Built with">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <p class="card-links">
+              <a href="https://core-continuum.com" target="_blank" rel="noreferrer">Visit core-continuum.com ↗</a>
+              <a href="https://github.com/ubiqwit/Graduate-School-of-Core-Energetics-Website" target="_blank" rel="noreferrer">Source ↗</a>
+            </p>
+          </div>
           <figure class="shot">
             <picture>
               <source srcset="assets/core-continuum.webp" type="image/webp" />
@@ -112,194 +150,249 @@
           </figure>
         </article>
 
-        <article class="project">
-          <header class="project-head">
-            <h3><a href="https://github.com/ubiqwit/HydraX" target="_blank" rel="noreferrer">HydraX</a></h3>
-            <span class="muted">Hackathon · Team of 4 · 2025</span>
-          </header>
-          <p>
-            ML rainfall forecasting and capture analytics for London, UK. Enter an
-            address and HydraX estimates how much rainwater the property could collect.
-          </p>
-          <p class="part">
-            My part: an ML model predicting 10 years of rainfall from historical climate
-            data, and a coverage-area tool that calculates roof and land collection
-            surface using geospatial mapping.
-          </p>
-          <ul class="stack" aria-label="Built with"><li>Python</li><li>Flask</li><li>scikit-learn</li><li>pandas</li><li>React (Next.js)</li><li>TypeScript</li><li>Google Geocoding API</li></ul>
-        </article>
+        <div class="card-grid">
+          <article class="card">
+            <p class="meta">2025 · Hackathon · Team of 4</p>
+            <h3>HydraX</h3>
+            <p>
+              ML rainfall forecasting and capture analytics for London, UK. Enter an
+              address and HydraX estimates how much rainwater the property could collect.
+            </p>
+            <p class="part">
+              <span>My part</span>
+              An ML model predicting 10 years of rainfall from historical climate data, and a
+              coverage-area tool that calculates roof and land collection surface using geospatial mapping.
+            </p>
+            <ul class="stack" aria-label="Built with">
+              <li>Python</li><li>Flask</li><li>scikit-learn</li><li>pandas</li><li>React (Next.js)</li><li>TypeScript</li><li>Google Geocoding API</li>
+            </ul>
+            <p class="card-links">
+              <a href="https://github.com/ubiqwit/HydraX" target="_blank" rel="noreferrer">View source ↗</a>
+            </p>
+          </article>
 
-        <article class="project">
-          <header class="project-head">
-            <h3><a href="https://github.com/moss951/Nutrition-App-MVC" target="_blank" rel="noreferrer">Nutrition Tracker</a></h3>
-            <span class="muted">Sheridan College · Team of 3 · 2025</span>
-          </header>
-          <p>
-            A web app for logging meals and tracking nutrients against personal goals,
-            built on the USDA’s FNDDS food and nutrient database.
-          </p>
-          <p class="part">
-            My part: the diet-log flow from food search to daily log, the food services
-            layer, diet goals, and the nutrient tracker chart that plots intake against
-            each goal.
-          </p>
-          <ul class="stack" aria-label="Built with"><li>C#</li><li>ASP.NET Core MVC</li><li>EF Core</li><li>SQLite</li><li>Google Charts</li></ul>
-        </article>
+          <article class="card">
+            <p class="meta">2025 · Sheridan College · Team of 3</p>
+            <h3>Nutrition Tracker</h3>
+            <p>
+              A web app for logging meals and tracking nutrients against personal goals,
+              built on the USDA’s FNDDS food and nutrient database.
+            </p>
+            <p class="part">
+              <span>My part</span>
+              The diet-log flow from food search to daily log, the food services layer, diet goals,
+              and the nutrient tracker chart that plots intake against each goal.
+            </p>
+            <ul class="stack" aria-label="Built with">
+              <li>C#</li><li>ASP.NET Core MVC</li><li>EF Core</li><li>SQLite</li><li>Google Charts</li>
+            </ul>
+            <p class="card-links">
+              <a href="https://github.com/moss951/Nutrition-App-MVC" target="_blank" rel="noreferrer">View source ↗</a>
+            </p>
+          </article>
+        </div>
 
-        <p class="more"><a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">More on GitHub</a></p>
+        <p class="more"><a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">More on GitHub ↗</a></p>
       </div>
     </section>
 
     <!-- Approach -->
-    <section class="section wrap" id="approach">
-      <h2 class="label">Approach</h2>
-      <div class="content">
-        <h3 class="title">On building with LLMs</h3>
-        <p>
-          LLMs have changed what writing software means. Producing code is no longer
-          the hard part. The hard part is deciding what to build, how it should be
-          structured, and whether the result is any good.
-        </p>
-        <p>
-          I think that’s where a developer’s focus belongs now: architecture, planning
-          and design, and learning to work with LLMs in a way that produces high-quality
-          code rather than unmanageable slop.
-        </p>
-        <ul class="principles">
-          <li>
-            <h4>Architect first</h4>
-            <p>Decide the structure, the data model and the boundaries before any code is generated.</p>
-          </li>
-          <li>
-            <h4>Plan and specify</h4>
-            <p>A clear plan and a precise specification are what make LLM output predictable and reviewable.</p>
-          </li>
-          <li>
-            <h4>Own the output</h4>
-            <p>Generated code still needs an owner. Tests, review and a coherent design are what keep it maintainable.</p>
-          </li>
-        </ul>
+    <section class="section" id="approach">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="index">02</span>
+          <h2>Approach</h2>
+          <p>How I think about building software with LLMs.</p>
+        </header>
+
+        <div class="approach">
+          <div class="approach-text">
+            <h3>On building with LLMs</h3>
+            <p>
+              LLMs have changed what writing software means. Producing code is no longer
+              the hard part. The hard part is deciding what to build, how it should be
+              structured, and whether the result is any good.
+            </p>
+            <p>
+              I think that’s where a developer’s focus belongs now: architecture, planning
+              and design, and learning to work with LLMs in a way that produces high-quality
+              code rather than unmanageable slop.
+            </p>
+          </div>
+          <ol class="principles">
+            <li class="card">
+              <span class="index">01</span>
+              <h4>Architect first</h4>
+              <p>Decide the structure, the data model and the boundaries before any code is generated.</p>
+            </li>
+            <li class="card">
+              <span class="index">02</span>
+              <h4>Plan and specify</h4>
+              <p>A clear plan and a precise specification are what make LLM output predictable and reviewable.</p>
+            </li>
+            <li class="card">
+              <span class="index">03</span>
+              <h4>Own the output</h4>
+              <p>Generated code still needs an owner. Tests, review and a coherent design are what keep it maintainable.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section class="section wrap" id="experience">
-      <h2 class="label">Experience</h2>
-      <div class="content">
+    <section class="section section-alt" id="experience">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="index">03</span>
+          <h2>Experience</h2>
+          <p>Operations, finance and IT roles — the problems I now build tools for.</p>
+        </header>
+
         <ol class="jobs">
           <li class="job">
-            <div class="job-head">
+            <p class="job-date">Jun 2026 — Present</p>
+            <div>
               <h3>Business Operations &amp; Automation Specialist</h3>
-              <span class="muted">Jun 2026 — Present</span>
+              <p class="muted">West Mississauga Dental · Mississauga</p>
+              <ul class="points">
+                <li>Reduced aged A/R by 80% in two months, working through a receivables backlog in ABELDent and improving how balances are tracked and collected.</li>
+                <li>Consulted with ABELDent’s developers on an OCR module that takes in and allocates payout statements from insurance companies.</li>
+                <li>Automate repetitive administrative workflows and document SOPs for administrative and financial processes.</li>
+              </ul>
             </div>
-            <p class="muted">West Mississauga Dental · Mississauga</p>
-            <ul class="points">
-              <li>Reduced aged A/R by 80% in two months, working through a receivables backlog in ABELDent and improving how balances are tracked and collected.</li>
-              <li>Consulted with ABELDent’s developers on an OCR module that takes in and allocates payout statements from insurance companies.</li>
-              <li>Automate repetitive administrative workflows and document SOPs for administrative and financial processes.</li>
-            </ul>
           </li>
 
           <li class="job">
-            <div class="job-head">
+            <p class="job-date">Nov 2023 — Present</p>
+            <div>
               <h3>Bookkeeper</h3>
-              <span class="muted">Nov 2023 — Present</span>
+              <p class="muted">Food4Less · Lindsay</p>
+              <ul class="points">
+                <li>Migrated financial data from manual spreadsheets into QuickBooks and set up the initial chart of accounts.</li>
+                <li>Manage accounts payable and receivable, working with customers and vendors to resolve payment issues.</li>
+                <li>Monitor invoices and bills so payments go out on time and discrepancies are caught and corrected.</li>
+              </ul>
             </div>
-            <p class="muted">Food4Less · Lindsay</p>
-            <ul class="points">
-              <li>Migrated financial data from manual spreadsheets into QuickBooks and set up the initial chart of accounts.</li>
-              <li>Manage accounts payable and receivable, working with customers and vendors to resolve payment issues.</li>
-              <li>Monitor invoices and bills so payments go out on time and discrepancies are caught and corrected.</li>
-            </ul>
           </li>
 
           <li class="job">
-            <div class="job-head">
+            <p class="job-date">Jul 2016 — Present</p>
+            <div>
               <h3>Property Manager</h3>
-              <span class="muted">Jul 2016 — Present</span>
+              <p class="muted">1297322 Ontario Limited · Milton</p>
+              <ul class="points">
+                <li>Primary contact for 30 commercial tenants, resolving day-to-day operational, maintenance and billing issues.</li>
+                <li>Run the full leasing process: marketing units, screening tenants, onboarding, and negotiating lease terms and renewals.</li>
+                <li>Coordinate crisis response, including a week-long power outage at a 20-tenant property, keeping operations running and tenants informed.</li>
+              </ul>
             </div>
-            <p class="muted">1297322 Ontario Limited · Milton</p>
-            <ul class="points">
-              <li>Primary contact for 30 commercial tenants, resolving day-to-day operational, maintenance and billing issues.</li>
-              <li>Run the full leasing process: marketing units, screening tenants, onboarding, and negotiating lease terms and renewals.</li>
-              <li>Coordinate crisis response, including a week-long power outage at a 20-tenant property, keeping operations running and tenants informed.</li>
-            </ul>
           </li>
 
           <li class="job">
-            <div class="job-head">
+            <p class="job-date">Apr 2015 — Sep 2018</p>
+            <div>
               <h3>Manager of Operations</h3>
-              <span class="muted">Apr 2015 — Sep 2018</span>
+              <p class="muted">GCentre Ajax · Ajax</p>
+              <ul class="points">
+                <li>Managed a team of five on-site staff across the front desk and marketing.</li>
+                <li>Wrote SOPs for renting, leasing and event hosting that made service more consistent and reduced operational errors.</li>
+                <li>Led marketing for memberships and event space across social media, email and print mail.</li>
+              </ul>
             </div>
-            <p class="muted">GCentre Ajax · Ajax</p>
-            <ul class="points">
-              <li>Managed a team of five on-site staff across the front desk and marketing.</li>
-              <li>Wrote SOPs for renting, leasing and event hosting that made service more consistent and reduced operational errors.</li>
-              <li>Led marketing for memberships and event space across social media, email and print mail.</li>
-            </ul>
           </li>
 
           <li class="job">
-            <div class="job-head">
+            <p class="job-date">Aug 2014 — Jul 2015</p>
+            <div>
               <h3>Assistant IT Director</h3>
-              <span class="muted">Aug 2014 — Jul 2015</span>
+              <p class="muted">Atlas Paper Bags · Ajax</p>
+              <ul class="points">
+                <li>Helped roll out a new SAP module (CO): user accounts, basic configuration, training and employee support.</li>
+                <li>Configured and maintained workstations for about 20 users, including software deployment, antivirus and networking.</li>
+              </ul>
             </div>
-            <p class="muted">Atlas Paper Bags · Ajax</p>
-            <ul class="points">
-              <li>Helped roll out a new SAP module (CO): user accounts, basic configuration, training and employee support.</li>
-              <li>Configured and maintained workstations for about 20 users, including software deployment, antivirus and networking.</li>
-            </ul>
           </li>
         </ol>
       </div>
     </section>
 
     <!-- Skills -->
-    <section class="section wrap" id="skills">
-      <h2 class="label">Skills</h2>
-      <div class="content">
-        <dl class="rows">
-          <div><dt>Languages</dt><dd>Python, JavaScript, SQL, MDX, Java, C#, C/C++, Rust, HTML/CSS</dd></div>
-          <div><dt>Data &amp; ML</dt><dd>Power BI, RStudio, Apache Spark, Hadoop, scikit-learn, pandas</dd></div>
-          <div><dt>Web &amp; APIs</dt><dd>RESTful APIs, OAuth, Flask, Django, ASP.NET, PHP, Spring MVC, Spring Security</dd></div>
-          <div><dt>Business systems</dt><dd>QuickBooks, SAP, Excel, ABELDent</dd></div>
-          <div><dt>Dev tools</dt><dd>Git, Docker</dd></div>
-        </dl>
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="index">04</span>
+          <h2>Skills</h2>
+          <p>Grouped by how I use them.</p>
+        </header>
+
+        <div class="skill-grid">
+          <div class="card">
+            <h3>Languages</h3>
+            <p>Python, JavaScript, SQL, MDX, Java, C#, C/C++, Rust, HTML/CSS</p>
+          </div>
+          <div class="card">
+            <h3>Data &amp; ML</h3>
+            <p>Power BI, RStudio, Apache Spark, Hadoop, scikit-learn, pandas</p>
+          </div>
+          <div class="card">
+            <h3>Web &amp; APIs</h3>
+            <p>RESTful APIs, OAuth, Flask, Django, ASP.NET, PHP, Spring MVC, Spring Security</p>
+          </div>
+          <div class="card">
+            <h3>Business systems</h3>
+            <p>QuickBooks, SAP, Excel, ABELDent</p>
+          </div>
+          <div class="card">
+            <h3>Dev tools</h3>
+            <p>Git, Docker</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Education -->
-    <section class="section wrap" id="education">
-      <h2 class="label">Education</h2>
-      <div class="content">
-        <dl class="rows">
-          <div>
-            <dt>Expected Apr 2028</dt>
-            <dd>Honours Bachelor of Computer Science, Data Analytics <span class="muted">— Sheridan College, Oakville</span></dd>
-          </div>
-          <div>
-            <dt>2009 — 2011</dt>
-            <dd>Bachelor of Business Administration, two years of coursework completed <span class="muted">— Schulich School of Business, York University</span></dd>
-          </div>
-          <div>
-            <dt>Certificates</dt>
-            <dd>CS50 <span class="muted">— Harvard University</span>; Cybersecurity <span class="muted">— Google</span></dd>
-          </div>
-        </dl>
+    <section class="section section-alt" id="education">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="index">05</span>
+          <h2>Education</h2>
+          <p>Computer science on top of a business foundation.</p>
+        </header>
+
+        <div class="edu-grid">
+          <article class="card">
+            <p class="meta">Expected Apr 2028</p>
+            <h3>Honours Bachelor of Computer Science</h3>
+            <p class="muted">Data Analytics · Sheridan College, Oakville</p>
+          </article>
+          <article class="card">
+            <p class="meta">2009 — 2011</p>
+            <h3>Bachelor of Business Administration</h3>
+            <p class="muted">Two years of coursework completed · Schulich School of Business, York University</p>
+          </article>
+          <article class="card">
+            <p class="meta">Certificates</p>
+            <h3>CS50 · Cybersecurity</h3>
+            <p class="muted">Harvard University · Google</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section wrap" id="contact">
-      <h2 class="label">Contact</h2>
-      <div class="content">
-        <p class="contact-line">
-          Have a role, a project, or a workflow that should be software? I’d like to hear about it.
-        </p>
-        <p class="contact-buttons">
-          <button class="button" type="button" data-open-contact>Send a message</button>
-          <a href="mailto:shaun.softdev@gmail.com">shaun.softdev@gmail.com</a>
-        </p>
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="card contact-card">
+          <div>
+            <h2>Have a process that should be software?</h2>
+            <p class="muted">Whether it’s a role, a client project, or a workflow that’s eating your team’s week — I’d like to hear about it.</p>
+          </div>
+          <div class="contact-card-actions">
+            <button class="button" type="button" data-open-contact>Send a message</button>
+            <a href="mailto:shaun.softdev@gmail.com">shaun.softdev@gmail.com</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
