@@ -195,10 +195,18 @@ a:hover { text-decoration-color: var(--accent); }
   margin-top: 32px;
 }
 
+.intro-photo { margin-top: 48px; }
+
+.intro-photo img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
 .facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 64px;
+  margin-top: 40px;
   border-top: 1px solid var(--line);
 }
 
@@ -741,7 +749,8 @@ body.contact-open { overflow: hidden; }
   .intro { padding: 56px 0 56px; }
   .section { padding: 64px 0; }
 
-  .facts { grid-template-columns: minmax(0, 1fr); margin-top: 48px; }
+  .intro-photo { margin-top: 36px; }
+  .facts { grid-template-columns: minmax(0, 1fr); margin-top: 28px; }
   .facts > div,
   .facts > div + div {
     padding: 14px 0;
