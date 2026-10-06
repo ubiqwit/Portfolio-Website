@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Bump ?v= whenever styles.css or script.js changes, so browsers never pair a new page with a cached old file. -->
-  <link rel="stylesheet" href="styles.css?v=8fe0f154" />
+  <link rel="stylesheet" href="styles.css?v=be54c5cd" />
 
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="script.js?v=fb024f49" defer></script>
@@ -45,28 +45,36 @@
   <main id="main">
     <!-- Intro -->
     <section class="intro" id="top">
-      <div class="wrap">
-        <p class="kicker">Developer · Toronto / GTA</p>
-        <h1>I'm Shaun, a software developer with a background in business administration.</h1>
-        <p class="lede">
-          I build tools for finance and operations: ledgers, reconciliations, reporting,
-          and the workflows around them. I’ve spent more than a decade in property
-          management, bookkeeping, IT, and operations, so I build for the people who
-          actually use the software.
-        </p>
-        <div class="intro-actions">
-          <a class="button" href="#projects">See my work</a>
-          <button class="button button-outline" type="button" data-open-contact>Get in touch</button>
+      <div class="hero">
+        <picture class="hero-bg">
+          <source media="(max-width: 760px)" srcset="assets/coast-hero-mobile.webp" type="image/webp" width="760" height="1145" />
+          <source media="(max-width: 760px)" srcset="assets/coast-hero-mobile.jpg" width="760" height="1145" />
+          <source srcset="assets/coast-hero.webp" type="image/webp" />
+          <img src="assets/coast-hero.jpg" width="2000" height="1200" decoding="async" fetchpriority="high"
+               alt="Shaun sitting cross-legged on pink granite rocks beside the ocean, with waves breaking along a rocky coastline." />
+        </picture>
+        <div class="wrap hero-inner">
+          <div class="hero-text">
+            <div class="hero-title">
+              <p class="kicker">Developer · Toronto / GTA</p>
+              <h1>I'm Shaun, a software developer with a background in business administration.</h1>
+            </div>
+            <div class="hero-body">
+              <p class="lede">
+                I build tools for finance and operations: ledgers, reconciliations, reporting,
+                and the workflows around them. I’ve spent more than a decade in property
+                management, bookkeeping, IT, and operations, so I build for the people who
+                actually use the software.
+              </p>
+              <div class="intro-actions">
+                <a class="button" href="#projects">See my work</a>
+                <button class="button button-outline" type="button" data-open-contact>Get in touch</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <figure class="intro-photo">
-          <picture>
-            <source media="(max-width: 680px)" srcset="assets/coast-narrow.webp" type="image/webp" />
-            <source media="(max-width: 680px)" srcset="assets/coast-narrow.jpg" />
-            <source srcset="assets/coast-wide.webp" type="image/webp" />
-            <img src="assets/coast-wide.jpg" width="1800" height="900" decoding="async" fetchpriority="high"
-                 alt="Shaun sitting cross-legged on pink granite rocks beside the ocean, with waves breaking along a rocky coastline." />
-          </picture>
-        </figure>
+      </div>
+      <div class="wrap">
         <dl class="facts">
           <div>
             <dt>Now</dt>
