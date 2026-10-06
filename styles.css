@@ -212,10 +212,34 @@ a:hover { text-decoration-color: var(--accent); }
 .facts dt { margin-bottom: 8px; color: var(--muted); }
 .facts dd { font-size: 15px; }
 
-.fact-links {
+.icon-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px 16px;
+  gap: 8px;
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.icon-link:hover {
+  border-color: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .04);
+  color: var(--text);
+}
+
+.icon-plain {
+  width: 32px;
+  height: 32px;
+  border-color: transparent;
+  color: var(--muted);
 }
 
 /* Sections */
@@ -258,16 +282,49 @@ a:hover { text-decoration-color: var(--accent); }
 
 .meta { color: var(--muted); }
 
-.live { color: var(--ok); }
-.live::before {
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text-2);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+}
+
+.badge-live {
+  border-color: rgba(116, 214, 160, .35);
+  color: var(--ok);
+}
+
+.badge-live::before {
   content: "";
-  display: inline-block;
   width: 6px;
   height: 6px;
-  margin-right: 6px;
   border-radius: 50%;
   background: var(--ok);
-  vertical-align: 1px;
+}
+
+.badge-claude {
+  border-color: rgba(244, 184, 96, .4);
+  color: var(--accent);
 }
 
 .card h3 {
@@ -519,12 +576,13 @@ a:hover { text-decoration-color: var(--accent); }
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 12px 24px;
   padding: 28px 0 40px;
 }
 
-.footer-links { display: flex; gap: 18px; }
+.footer-links { display: flex; gap: 4px; margin-right: -7px; }
 
 /* Contact dialog */
 body.contact-open { overflow: hidden; }

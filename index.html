@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Bump ?v= whenever styles.css or script.js changes, so browsers never pair a new page with a cached old file. -->
-  <link rel="stylesheet" href="styles.css?v=1a48fe7b" />
+  <link rel="stylesheet" href="styles.css?v=cd74e64a" />
 
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="script.js?v=fb024f49" defer></script>
@@ -71,10 +71,10 @@
           </div>
           <div>
             <dt>Elsewhere</dt>
-            <dd class="fact-links">
-              <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="mailto:shaun.softdev@gmail.com">Email</a>
+            <dd class="icon-row">
+              <a class="icon-link" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+              <a class="icon-link" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+              <a class="icon-link" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
             </dd>
           </div>
         </dl>
@@ -87,12 +87,15 @@
         <header class="section-head">
           <span class="index">01</span>
           <h2>Projects</h2>
-          <p>A full-stack finance app, a live client website, and team projects in data and machine learning.</p>
+          <p>A full-stack finance app, a live client website, and team projects in data and machine learning. Everything here is hand-coded except the Private Mortgage Manager, which I built with Claude.</p>
         </header>
 
         <article class="card feature">
           <div class="feature-text">
-            <p class="meta">2026 · Full-stack web app</p>
+            <div class="meta-row">
+              <p class="meta">2026 · Full-stack web app</p>
+              <ul class="badges" aria-label="Status"><li class="badge badge-live">Live</li><li class="badge badge-claude">Claude-assisted</li></ul>
+            </div>
             <h3>Private Mortgage Manager</h3>
             <p>
               A web app for private mortgage lenders. It tracks every loan in the book,
@@ -122,7 +125,10 @@
 
         <article class="card feature">
           <div class="feature-text">
-            <p class="meta">2026 · Client work · <span class="live">Live</span></p>
+            <div class="meta-row">
+              <p class="meta">2026 · Client work</p>
+              <ul class="badges" aria-label="Status"><li class="badge badge-live">Live</li><li class="badge">Hand-coded</li></ul>
+            </div>
             <h3>Core Continuum</h3>
             <p>
               The website for Core Continuum, a graduate-level Core Energetics training
@@ -152,7 +158,10 @@
 
         <div class="card-grid">
           <article class="card">
-            <p class="meta">2025 · Hackathon · Team of 4</p>
+            <div class="meta-row">
+              <p class="meta">2025 · Hackathon · Team of 4</p>
+              <ul class="badges" aria-label="Status"><li class="badge">Hand-coded</li></ul>
+            </div>
             <h3>HydraX</h3>
             <p>
               ML rainfall forecasting and capture analytics for London, UK. Enter an
@@ -172,7 +181,10 @@
           </article>
 
           <article class="card">
-            <p class="meta">2025 · Sheridan College · Team of 3</p>
+            <div class="meta-row">
+              <p class="meta">2025 · Sheridan College · Team of 3</p>
+              <ul class="badges" aria-label="Status"><li class="badge">Hand-coded</li></ul>
+            </div>
             <h3>Nutrition Tracker</h3>
             <p>
               A web app for logging meals and tracking nutrients against personal goals,
@@ -401,9 +413,9 @@
     <div class="wrap footer-inner">
       <span>© <span id="year">2026</span> Shaun Malhotra</span>
       <span class="footer-links">
-        <a href="https://github.com/ubiqwit" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="mailto:shaun.softdev@gmail.com">Email</a>
+        <a class="icon-link icon-plain" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        <a class="icon-link icon-plain" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+        <a class="icon-link icon-plain" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
       </span>
     </div>
   </footer>
