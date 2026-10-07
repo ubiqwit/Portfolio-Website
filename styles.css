@@ -156,6 +156,8 @@ a:hover { text-decoration-color: var(--accent); }
 .nav a:hover { color: var(--text); }
 .nav a.is-active { color: var(--text); background: rgba(255, 255, 255, .06); }
 
+.header-resume { margin-left: 4px; }
+
 /* Intro */
 .intro { padding: 0 0 72px; }
 
@@ -774,7 +776,7 @@ body.contact-open { overflow: hidden; }
 
 @media (max-width: 820px) {
   .nav { display: none; }
-  .header-inner .button { margin-left: auto; }
+  .header-resume { margin-left: auto; }
 }
 
 @media (max-width: 760px) {
