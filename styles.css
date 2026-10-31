@@ -378,8 +378,7 @@ a:hover { text-decoration-color: var(--accent); }
   letter-spacing: -0.015em;
 }
 
-.card > p:not(.meta):not(.card-links):not(.part),
-.feature-text > p:not(.meta):not(.card-links) {
+.summary {
   margin-top: 10px;
   color: var(--text-2);
   font-size: 15.5px;
@@ -582,10 +581,10 @@ a:hover { text-decoration-color: var(--accent); }
   text-transform: uppercase;
 }
 
-.skill-grid .card > p { margin-top: 10px; color: var(--text); }
+.skill-grid p { margin-top: 10px; color: var(--text); }
 
 .edu-grid h3 { margin-top: 10px; font-size: 18px; }
-.edu-grid .card > p.muted { color: var(--muted); font-size: 15px; }
+.edu-grid h3 + .muted { margin-top: 10px; font-size: 15px; }
 
 /* Contact */
 .contact-card {
@@ -634,31 +633,22 @@ a:hover { text-decoration-color: var(--accent); }
 
 .footer-links { display: flex; gap: 4px; margin-right: -7px; }
 
-/* Contact dialog */
-body.contact-open { overflow: hidden; }
-
-.contact-modal[hidden] { display: none; }
+/* Contact dialog: the <dialog> is a bare frame; .contact-dialog inside it is the visible box and the scroller */
+body:has(.contact-modal[open]) { overflow: hidden; }
 
 .contact-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: grid;
-  place-items: center;
-  padding: 16px;
+  width: min(560px, 100% - 32px);
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
 }
 
-.contact-backdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  background: rgba(0, 0, 0, .7);
-  cursor: default;
-}
+.contact-modal::backdrop { background: rgba(0, 0, 0, .7); }
 
 .contact-dialog {
-  position: relative;
-  width: min(560px, 100%);
   max-height: calc(100dvh - 32px);
   overflow: auto;
   padding: 24px;

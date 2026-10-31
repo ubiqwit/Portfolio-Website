@@ -18,14 +18,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&display=swap" rel="stylesheet" />
   <!-- Bump ?v= whenever styles.css or script.js changes, so browsers never pair a new page with a cached old file. -->
-  <link rel="stylesheet" href="styles.css?v=616b12fc" />
+  <link rel="stylesheet" href="styles.css?v=35b20b17" />
 
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <script src="script.js?v=fb024f49" defer></script>
+  <script src="https://unpkg.com/@formspree/ajax@1.1.5/dist/global.js" integrity="sha384-9fQrvHz7unHjhv7e+pJqhvNxPV4tYHHsSn3PxBIEyPTGY8Q/PAKM1sfhL+zTYmhc" crossorigin="anonymous" defer></script>
+  <script src="script.js?v=fba411a4" defer></script>
 </head>
 <body>
+  <!-- Icons, defined once and referenced with <use> -->
+  <svg style="display: none">
+    <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="icon-resume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  </svg>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -58,7 +66,7 @@
           <div class="hero-text">
             <div class="hero-title">
               <p class="kicker">Developer · Toronto / GTA</p>
-              <h1>I'm Shaun, a software developer with a background in business administration.</h1>
+              <h1>I’m Shaun, a software developer with a background in business administration.</h1>
             </div>
             <div class="hero-body">
               <p class="lede">
@@ -90,10 +98,10 @@
           <div>
             <dt>Elsewhere</dt>
             <dd class="icon-row">
-              <a class="icon-link" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
-              <a class="icon-link" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
-              <a class="icon-link" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-              <a class="icon-link" href="resume.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="Resume (PDF)" title="Resume (PDF)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></a>
+              <a class="icon-link" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" aria-hidden="true"><use href="#icon-github"/></svg></a>
+              <a class="icon-link" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
+              <a class="icon-link" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" aria-hidden="true"><use href="#icon-email"/></svg></a>
+              <a class="icon-link" href="resume.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="Resume (PDF)" title="Resume (PDF)"><svg width="18" height="18" aria-hidden="true"><use href="#icon-resume"/></svg></a>
             </dd>
           </div>
         </dl>
@@ -116,7 +124,7 @@
               <ul class="badges" aria-label="Status"><li class="badge badge-live">Live</li><li class="badge badge-claude">Claude-assisted</li></ul>
             </div>
             <h3>Private Mortgage Manager</h3>
-            <p>
+            <p class="summary">
               A web app for private mortgage lenders. It tracks every loan in the book,
               matches bank deposits to mortgage payments, follows the rate environment,
               and produces month-end income reports for the accountant.
@@ -149,7 +157,7 @@
               <ul class="badges" aria-label="Status"><li class="badge badge-live">Live</li><li class="badge badge-claude">Claude-assisted</li></ul>
             </div>
             <h3>Core Continuum</h3>
-            <p>
+            <p class="summary">
               The website for Core Continuum, a graduate-level Core Energetics training
               program, live and in use by the client.
             </p>
@@ -182,7 +190,7 @@
               <ul class="badges" aria-label="Status"><li class="badge">Hand-coded</li></ul>
             </div>
             <h3>HydraX</h3>
-            <p>
+            <p class="summary">
               ML rainfall forecasting and capture analytics for London, UK. Enter an
               address and HydraX estimates how much rainwater the property could collect.
             </p>
@@ -205,7 +213,7 @@
               <ul class="badges" aria-label="Status"><li class="badge">Hand-coded</li></ul>
             </div>
             <h3>Nutrition Tracker</h3>
-            <p>
+            <p class="summary">
               A web app for logging meals and tracking nutrients against personal goals,
               built on the USDA’s FNDDS food and nutrient database.
             </p>
@@ -404,8 +412,10 @@
           </article>
           <article class="card">
             <p class="meta">Certificates</p>
-            <p>CS50 (Harvard University)</p>
-            <p class="muted">Cybersecurity (Google Certificates)</p>
+            <ul class="points">
+              <li>CS50 (Harvard University)</li>
+              <li>Cybersecurity (Google Certificates)</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -433,19 +443,17 @@
     <div class="wrap footer-inner">
       <span>© <span id="year">2026</span> Shaun Malhotra</span>
       <span class="footer-links">
-        <a class="icon-link icon-plain" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
-        <a class="icon-link icon-plain" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
-        <a class="icon-link icon-plain" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-        <a class="icon-link icon-plain" href="resume.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="Resume (PDF)" title="Resume (PDF)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></a>
+        <a class="icon-link icon-plain" href="https://github.com/ubiqwit" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg width="18" height="18" aria-hidden="true"><use href="#icon-github"/></svg></a>
+        <a class="icon-link icon-plain" href="https://www.linkedin.com/in/shaun-malhotra" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="18" height="18" aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
+        <a class="icon-link icon-plain" href="mailto:shaun.softdev@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18" aria-hidden="true"><use href="#icon-email"/></svg></a>
+        <a class="icon-link icon-plain" href="resume.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="Resume (PDF)" title="Resume (PDF)"><svg width="18" height="18" aria-hidden="true"><use href="#icon-resume"/></svg></a>
       </span>
     </div>
   </footer>
 
-  <!-- Contact dialog -->
-  <div class="contact-modal" id="contact-modal" hidden>
-    <button class="contact-backdrop" type="button" data-close-contact aria-label="Close contact form" tabindex="-1"></button>
-
-    <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+  <!-- Contact dialog. Padding lives on the inner div, so a click that lands on the dialog element itself was on the backdrop. -->
+  <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title">
+    <div class="contact-dialog">
       <div class="contact-dialog-head">
         <h2 id="contact-title">Send me a message</h2>
         <button class="contact-close" type="button" data-close-contact aria-label="Close contact form">
@@ -460,11 +468,11 @@
       <div class="form-success" data-fs-success></div>
       <div class="form-error" data-fs-error></div>
 
-      <form id="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/xrpzlpvk" method="POST">
         <div class="field-grid">
           <label for="contact-name">
             <span>Name</span>
-            <input id="contact-name" name="name" type="text" autocomplete="name" data-fs-field required />
+            <input id="contact-name" name="name" type="text" autocomplete="name" data-fs-field required autofocus />
             <small data-fs-error="name"></small>
           </label>
 
@@ -486,7 +494,7 @@
           <button class="button" type="submit" data-fs-submit-btn>Send message</button>
         </div>
       </form>
-    </section>
-  </div>
+    </div>
+  </dialog>
 </body>
 </html>
